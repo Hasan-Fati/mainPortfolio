@@ -71,3 +71,30 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+/* ====================== popup js =====================*/
+
+let popup = document.getElementById("popup");
+let blur = document.getElementById("home");
+
+function openPopup() {
+    popup.classList.add("open-popup");
+    blur.classList.toggle("active");
+}
+
+function closePopup() {
+    popup.classList.remove("open-popup");
+    blur.classList.remove("active");
+}
+
+
+/* ====================== spinner loader js =====================*/
+
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+
+    loader.addEventListener("transitionend", () => {
+        document.classList.remove("loader");
+    })
+})
