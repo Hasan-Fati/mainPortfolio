@@ -494,6 +494,9 @@ span {
     .portfolio-container {
         grid-template-columns: 1fr;
     }
+    .popup {
+        max-width: 90%;
+    }
 }
 
 @media (max-width: 450px) {
@@ -503,6 +506,9 @@ span {
 
     .contact form .input-box input {
         width: 100%;
+    }
+    .popup {
+        max-width: 90%;
     }
 }
 
@@ -522,5 +528,49 @@ span {
     .footer {
         text-align: center;
         margin-top: 2rem;
+    }
+    .popup {
+        max-width: 90%;
+    }
+}
+/* -------------------------  spinner loader style ------------------------ */
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f242d;
+    transition: opacity 0.75s , visibility 0.75s;
+    z-index: 999;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 10px solid;
+    border-color: var(--main-color) transparent var(--main-color) transparent;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
