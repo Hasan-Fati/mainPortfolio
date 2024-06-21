@@ -533,6 +533,38 @@ span {
         max-width: 90%;
     }
 }
+/* -------------------------  popup style ------------------------ */
+
+.popup {
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 50px;
+    visibility: hidden;
+    transition: transform .4s, top .4s;
+}
+
+.popup .btn  {
+    padding: 6px 30px;
+    margin-top: 5px;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.home#home.active { 
+    filter: blur(20px);
+}
+
+
 /* -------------------------  spinner loader style ------------------------ */
 
 
